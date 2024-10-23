@@ -111,16 +111,16 @@ namespace DVLD_DataAccess
 
                 using (SqlCommand command = new SqlCommand(query , connection))
                 {
-                    command.Parameters.Add("applicationID", SqlDbType.Int).Value = applicationID;
-                    command.Parameters.Add("driverID", SqlDbType.Int).Value = driverID;
-                    command.Parameters.Add("licenseClass", SqlDbType.Int).Value = licenseClass;
-                    command.Parameters.Add("issueDate", SqlDbType.DateTime).Value = issueDate;
-                    command.Parameters.Add("expirationDate", SqlDbType.DateTime).Value = expirationDate;
-                    command.Parameters.Add("notes", SqlDbType.NVarChar).Value = notes;
-                    command.Parameters.Add("paidFees", SqlDbType.SmallMoney).Value = paidFees;
-                    command.Parameters.Add("isActive", SqlDbType.TinyInt).Value = isActive;
-                    command.Parameters.Add("issueReason", SqlDbType.TinyInt).Value = issueReason;
-                    command.Parameters.Add("createdByUserID", SqlDbType.Int).Value = createdByUserID;
+                    command.Parameters.Add("@applicationID", SqlDbType.Int).Value = applicationID;
+                    command.Parameters.Add("@driverID", SqlDbType.Int).Value = driverID;
+                    command.Parameters.Add("@licenseClass", SqlDbType.Int).Value = licenseClass;
+                    command.Parameters.Add("@issueDate", SqlDbType.DateTime).Value = issueDate;
+                    command.Parameters.Add("@expirationDate", SqlDbType.DateTime).Value = expirationDate;
+                    command.Parameters.Add("@notes", SqlDbType.NVarChar).Value = notes;
+                    command.Parameters.Add("@paidFees", SqlDbType.SmallMoney).Value = paidFees;
+                    command.Parameters.Add("@isActive", SqlDbType.Bit).Value = isActive;
+                    command.Parameters.Add("@issueReason", SqlDbType.TinyInt).Value = issueReason;
+                    command.Parameters.Add("@createdByUserID", SqlDbType.Int).Value = createdByUserID;
 
                     try
                     {
@@ -165,17 +165,17 @@ namespace DVLD_DataAccess
 
                 using (SqlCommand command = new SqlCommand(query , connection))
                 {
-                    command.Parameters.Add("LicenseID", SqlDbType.Int).Value = licenseID;
-                    command.Parameters.Add("applicationID", SqlDbType.Int).Value = applicationID;
-                    command.Parameters.Add("driverID", SqlDbType.Int).Value = driverID;
-                    command.Parameters.Add("licenseClass", SqlDbType.Int).Value = licenseClass;
-                    command.Parameters.Add("issueDate", SqlDbType.DateTime).Value = issueDate;
-                    command.Parameters.Add("expirationDate", SqlDbType.DateTime).Value = expirationDate;
-                    command.Parameters.Add("notes", SqlDbType.NVarChar).Value = notes;
-                    command.Parameters.Add("paidFees", SqlDbType.SmallMoney).Value = paidFees;
-                    command.Parameters.Add("isActive", SqlDbType.TinyInt).Value = isActive;
-                    command.Parameters.Add("issueReason", SqlDbType.TinyInt).Value = issueReason;
-                    command.Parameters.Add("createdByUserID", SqlDbType.Int).Value = createdByUserID;
+                    command.Parameters.Add("@LicenseID", SqlDbType.Int).Value = licenseID;
+                    command.Parameters.Add("@applicationID", SqlDbType.Int).Value = applicationID;
+                    command.Parameters.Add("@driverID", SqlDbType.Int).Value = driverID;
+                    command.Parameters.Add("@licenseClass", SqlDbType.Int).Value = licenseClass;
+                    command.Parameters.Add("@issueDate", SqlDbType.DateTime).Value = issueDate;
+                    command.Parameters.Add("@expirationDate", SqlDbType.DateTime).Value = expirationDate;
+                    command.Parameters.Add("@notes", SqlDbType.NVarChar).Value = notes;
+                    command.Parameters.Add("@paidFees", SqlDbType.SmallMoney).Value = paidFees;
+                    command.Parameters.Add("@isActive", SqlDbType.Bit).Value = isActive;
+                    command.Parameters.Add("@issueReason", SqlDbType.TinyInt).Value = issueReason;
+                    command.Parameters.Add("@createdByUserID", SqlDbType.Int).Value = createdByUserID;
 
                     try
                     {
@@ -192,17 +192,24 @@ namespace DVLD_DataAccess
             return affectedRows > 0;
         }
 
-        // complete it after creating Drivers Class
+        
         public static int? GetActiveLicenseIDByPersonID(int personID, int licenseClassID)
         {
             int? activeLicenseID = null;
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
-                string query = @"";
+                string query = @"SELECT Licenses.LicenseID
+                                    FROM     Drivers INNER JOIN Licenses 
+                                                ON Drivers.DriverID = Licenses.DriverID
+                                    WHERE  (Drivers.PersonID = @personID) 
+                                            AND (LicenseClassID = @licenseClassID) 
+                                            AND (Licenses.IsActive = 1)";
 
                 using(SqlCommand command = new SqlCommand(query ,connection))
                 {
+                    command.Parameters.Add("@personID", SqlDbType.Int).Value = personID;
+                    command.Parameters.Add("@licenseClassID", SqlDbType.Int).Value = licenseClassID;
 
                     try
                     {
@@ -223,8 +230,70 @@ namespace DVLD_DataAccess
             return activeLicenseID;
         }
 
-        //GetDriverLicenses
-        //DeactivateLicense
+        public static DataTable GetDriverLicenses(int driverID)
+        {
+            DataTable dt = new DataTable();
+            using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"SELECT     
+                           Licenses.LicenseID,
+                           ApplicationID,
+		                   LicenseClasses.ClassName, Licenses.IssueDate, 
+		                   Licenses.ExpirationDate, Licenses.IsActive
+                           FROM Licenses INNER JOIN
+                                LicenseClasses ON Licenses.LicenseClass = LicenseClasses.LicenseClassID
+                            where DriverID=@driverID
+                            Order By IsActive Desc, ExpirationDate Desc";
+
+                using (SqlCommand command = new SqlCommand(query, connection))
+                {
+                    command.Parameters.Add("@driverID", SqlDbType.Int).Value = driverID;
+
+                    try
+                    {
+                        connection.Open();
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                                dt.Load(reader);
+                        }
+                    }
+                    catch (Exception ex) 
+                    { 
+                        Console.WriteLine(ex.Message); 
+                    }
+                }
+            }
+
+            return dt;
+        }
+
+        public static bool DeactivateLicense(int licenseID)
+        {
+            int affectedRow = 0;
+            using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+            {
+                string query = @"UPDATE Licenses
+                                    SET IsActive = 0 WHERE LicenseID = @licenseID";
+
+                using(SqlCommand command = new SqlCommand(query,connection))
+                {
+                    command.Parameters.Add("@licenseID", SqlDbType.Int).Value = licenseID;
+
+                    try
+                    {
+                        connection.Open();
+                        affectedRow = command.ExecuteNonQuery();
+                    }
+                    catch(Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                    }
+                }
+            }
+
+            return affectedRow > 0;
+        }
 
 
     }
