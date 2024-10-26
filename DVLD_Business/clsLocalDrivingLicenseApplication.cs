@@ -141,6 +141,10 @@ namespace DVLD_Business
             return clsLocalDrivingLicenseApplicationData.GetAllLocalLicenseApplications();
         }
 
+        public int? GetActiveLicenseID()
+        {
+            return clsLicense.GetActiveLicenseIDByPersonID(this.ApplicationID, this.LicenseClassID);
+        }
 
 
     }

@@ -59,11 +59,23 @@
     <Compile Include="Applications\ApplicationTypes\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\ctrlDrivingLicenseApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\ctrlDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\frmManageApplications.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Applications\frmManageApplications.Designer.cs">
       <DependentUpon>frmManageApplications.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\frmTestDrivingLicenseApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\frmTestDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>frmTestDrivingLicenseApplicationInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Applications\Local Driving License\frmAddUpdateLocalLicenseApplication.cs">
       <SubType>Form</SubType>
@@ -190,8 +202,14 @@
     <EmbeddedResource Include="Applications\ApplicationTypes\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ctrlDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\frmManageApplications.resx">
       <DependentUpon>frmManageApplications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\frmTestDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>frmTestDrivingLicenseApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\frmAddUpdateLocalLicenseApplication.resx">
       <DependentUpon>frmAddUpdateLocalLicenseApplication.cs</DependentUpon>
@@ -620,6 +638,17 @@
   <ItemGroup>
     <None Include="Resources\person_.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\pin-number32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-number32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin-number321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-number321.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

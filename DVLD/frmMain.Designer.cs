@@ -58,8 +58,8 @@
             this.changePasswordToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.addNewLocalLicenseAppToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -362,6 +362,15 @@
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(14, 68);
             // 
+            // addNewLocalLicenseAppToolStripMenuItem
+            // 
+            this.addNewLocalLicenseAppToolStripMenuItem.Image = global::DVLD.Properties.Resources.Application_Types_64;
+            this.addNewLocalLicenseAppToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.addNewLocalLicenseAppToolStripMenuItem.Name = "addNewLocalLicenseAppToolStripMenuItem";
+            this.addNewLocalLicenseAppToolStripMenuItem.Size = new System.Drawing.Size(298, 68);
+            this.addNewLocalLicenseAppToolStripMenuItem.Text = "Driving License Application Info";
+            this.addNewLocalLicenseAppToolStripMenuItem.Click += new System.EventHandler(this.addNewLocalLicenseAppToolStripMenuItem_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -372,15 +381,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // addNewLocalLicenseAppToolStripMenuItem
-            // 
-            this.addNewLocalLicenseAppToolStripMenuItem.Image = global::DVLD.Properties.Resources.Application_Types_64;
-            this.addNewLocalLicenseAppToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
-            this.addNewLocalLicenseAppToolStripMenuItem.Name = "addNewLocalLicenseAppToolStripMenuItem";
-            this.addNewLocalLicenseAppToolStripMenuItem.Size = new System.Drawing.Size(259, 68);
-            this.addNewLocalLicenseAppToolStripMenuItem.Text = "add new local license app";
-            this.addNewLocalLicenseAppToolStripMenuItem.Click += new System.EventHandler(this.addNewLocalLicenseAppToolStripMenuItem_Click);
             // 
             // frmMain
             // 

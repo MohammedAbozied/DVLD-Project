@@ -53,3 +53,5 @@ D:\DVLD Project\DVLD\obj\Debug\DVLD.Tests.TestTypes.frmManageTestTypes.resources
 D:\DVLD Project\DVLD\obj\Debug\DVLD.Tests.TestTypes.frmUpdateTestType.resources
 D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.frmManageApplications.resources
 D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.Local_Driving_License.frmAddUpdateLocalLicenseApplication.resources
+D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.ctrlDrivingLicenseApplicationInfo.resources
+D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.frmTestDrivingLicenseApplicationInfo.resources

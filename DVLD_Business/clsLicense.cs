@@ -29,6 +29,10 @@ namespace DVLD_Business
         public float? PaidFees { get; set; }
         public bool? IsActive { get; set; }
         public enIssueReason IssueReason { get; set; }
+        public string IssueReasonText 
+        {
+            get => GetIssueReasonText(this.IssueReason);
+        }
         public int? CreatedByUserID { get; set; }
 
         public clsLicense()
@@ -77,12 +81,10 @@ namespace DVLD_Business
             return LicenseID.HasValue;
         }
 
-        private bool _UpdateLicense()
-        {
-            return clsLicenseData.UpdateLicense(this.LicenseID.Value, this.ApplicationID.Value, this.DriverID.Value, this.LicenseClass.Value,
+        private bool _UpdateLicense() => 
+            clsLicenseData.UpdateLicense(this.LicenseID.Value, this.ApplicationID.Value, this.DriverID.Value, this.LicenseClass.Value,
                 this.IssueDate, this.ExpirationDate, this.Notes, this.PaidFees.Value, this.IsActive.Value,
                 (byte)this.IssueReason, this.CreatedByUserID.Value);
-        }
 
         public bool Save()
         {
@@ -125,17 +127,44 @@ namespace DVLD_Business
                 return null;
         }
 
-        public static DataTable GetAllLicenses()
+        public static DataTable GetAllLicenses() => 
+            clsLicenseData.GetAllLicenses();
+
+        public static bool IsLicenseExistByPersonID(int personID, int licenseClassID) =>
+            clsLicenseData.GetActiveLicenseIDByPersonID(personID, licenseClassID) != null;
+
+        public static int? GetActiveLicenseIDByPersonID(int personID, int licenseClassID) =>
+            clsLicenseData.GetActiveLicenseIDByPersonID(personID, licenseClassID);
+
+        public static DataTable GetDriverLicenses(int driverID) =>
+            clsLicenseData.GetDriverLicenses(driverID);
+
+        public bool IsLicenseExpired() =>
+            (this.ExpirationDate < DateTime.Now);
+
+        public bool DeActiveLicense() => 
+            clsLicenseData.DeactivateLicense(this.LicenseID.Value);
+
+        public static string GetIssueReasonText(enIssueReason issueReason)
         {
-            return clsLicenseData.GetAllLicenses();
+            switch(issueReason)
+            {
+                case enIssueReason.FirstTime:
+                    return "First Time";
+
+                case enIssueReason.Renew:
+                    return "Renew";
+
+                case enIssueReason.LostReplacement:
+                    return "Replacement For Lost";
+
+                case enIssueReason.DamagedReplacement:
+                    return "Replacement For Damaged";
+
+                default:
+                    return "Nothing";
+            }
         }
-
-        public static bool IsLicenseExistByPersonID(int personID, int licenseClassID)
-        {
-            return clsLicenseData.GetActiveLicenseIDByPersonID(personID, licenseClassID) != 0;
-        }
-
-
 
 
 

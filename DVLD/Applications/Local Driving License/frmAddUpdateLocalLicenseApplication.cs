@@ -56,7 +56,7 @@ namespace DVLD.Applications.Local_Driving_License
         private void _ResetDefaultValues()
         {
             _FillLicenseClassComboBox();
-
+            
             if(_Mode == enMode.AddNew) // add new mode 
             {
                 lblTitle.Text = this.Text = "New Local Driving License Application";
@@ -146,7 +146,13 @@ namespace DVLD.Applications.Local_Driving_License
                 }
 
                 // if person has the same type of license 
-                // after complete clsLicense dataAccess and business
+                if(clsLicense.IsLicenseExistByPersonID(ctrlPersonCardWithFilter1.PersonID,LicenseClassID))
+                {
+                    MessageBox.Show($"Person already have a license with the same applied driving class, Choose different driving class",
+                        "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cbLicenseClass.Focus();
+                    return;
+                }
 
                 // Fill object
                 _LocalDrivingLicenseApplication.ApplicantPersonID = ctrlPersonCardWithFilter1.PersonID;
