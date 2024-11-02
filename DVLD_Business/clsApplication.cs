@@ -72,7 +72,7 @@ namespace DVLD_Business
             this.PersonInfo = clsPerson.Find(this.ApplicantPersonID);
             this.ApplicationDate = ApplicationDate;
             this.ApplicationTypeID = ApplicationTypeID;
-            this.ApplicationTypeInfo = clsApplicationType.Find(this.ApplicantPersonID);
+            this.ApplicationTypeInfo = clsApplicationType.Find(this.ApplicationTypeID);
             this.ApplicationStatus = ApplicationStatus;
             this.LastStatusDate = LastStatusDate;
             this.PaidFees= PaidFees;

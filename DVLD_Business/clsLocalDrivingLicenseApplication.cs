@@ -96,18 +96,18 @@ namespace DVLD_Business
             return false;
         }
 
-        public static clsLocalDrivingLicenseApplication FindByLicenseID(int LicenseID)
+        public static clsLocalDrivingLicenseApplication FindByLDLAppID(int ldlAppID)
         {
             int ApplicationID = -1, LicenseClassID = -1;  
 
             bool isFound = clsLocalDrivingLicenseApplicationData.
-                GetLocalDrivingLicenseApplicationInfoByID(LicenseID, ref ApplicationID, ref LicenseClassID);
+                GetLocalDrivingLicenseApplicationInfoByID(ldlAppID, ref ApplicationID, ref LicenseClassID);
              
             if(isFound)
             {
                 clsApplication Application = clsApplication.Find(ApplicationID);
 
-                return new clsLocalDrivingLicenseApplication(LicenseClassID, ApplicationID,
+                return new clsLocalDrivingLicenseApplication(ldlAppID, ApplicationID,
                     Application.ApplicantPersonID, Application.ApplicationDate, Application.ApplicationTypeID,
                     Application.ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application.CreatedByUserID,
                     LicenseClassID);
@@ -118,16 +118,16 @@ namespace DVLD_Business
 
         public static clsLocalDrivingLicenseApplication FindByApplicationID(int ApplicationID)
         {
-            int LicenseID = -1, LicenseClassID = -1;
+            int LDLApplicationID = -1, LicenseClassID = -1;
 
             bool isFound = clsLocalDrivingLicenseApplicationData.
-                GetLocalDrivingLicenseApplicationInfoByAppID(ApplicationID, ref LicenseID, ref LicenseClassID);
+                GetLocalDrivingLicenseApplicationInfoByAppID(ApplicationID, ref LDLApplicationID, ref LicenseClassID);
 
             if (isFound)
             {
                 clsApplication Application = clsApplication.Find(ApplicationID);
 
-                return new clsLocalDrivingLicenseApplication(LicenseClassID, ApplicationID,
+                return new clsLocalDrivingLicenseApplication(LDLApplicationID, ApplicationID,
                     Application.ApplicantPersonID, Application.ApplicationDate, Application.ApplicationTypeID,
                     Application.ApplicationStatus, Application.LastStatusDate, Application.PaidFees, Application.CreatedByUserID,
                     LicenseClassID);

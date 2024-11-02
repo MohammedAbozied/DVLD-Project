@@ -12,7 +12,7 @@ namespace DVLD_DataAccess
 {
     public class clsLocalDrivingLicenseApplicationData
     {
-        public static bool GetLocalDrivingLicenseApplicationInfoByID(int LicenseID,
+        public static bool GetLocalDrivingLicenseApplicationInfoByID(int LocalDrivingLicenseApplicationID,
             ref int ApplicationID,ref int LicenseClassID)
         {
             bool isFound = false;
@@ -20,11 +20,11 @@ namespace DVLD_DataAccess
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"SELECT * FROM LocalDrivingLicenseApplications 
-                                    WHERE LocalDrivingLicenseApplicationID = @LicenseID";
+                                    WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
                 using (SqlCommand command = new SqlCommand(query , connection))
                 {
-                    command.Parameters.AddWithValue("@LicenseID", LicenseID);
+                    command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
 
                     try
                     {
@@ -52,7 +52,7 @@ namespace DVLD_DataAccess
         }
 
         public static bool GetLocalDrivingLicenseApplicationInfoByAppID(int ApplicationID,
-            ref int LicenseID, ref int LicenseClassID)
+            ref int LocalDrivingLicenseApplicationID, ref int LicenseClassID)
         {
             bool isFound = false;
 
@@ -72,7 +72,7 @@ namespace DVLD_DataAccess
                         {
                             if (reader.Read())
                             {
-                                LicenseID = (int)reader["LicenseID"];
+                                LocalDrivingLicenseApplicationID = (int)reader["LocalDrivingLicenseApplicationID"];
                                 LicenseClassID = (int)reader["LicenseClassID"];
                                 isFound = true;
                             }
@@ -92,7 +92,7 @@ namespace DVLD_DataAccess
 
         public static int AddNewLocalDrivingLicenseApplication(int ApplicationID, int LicenseClassID)
         {
-            int? LicenseID = null;
+            int? LocalDrivingLicenseApplicationID = null;
 
             using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
@@ -111,7 +111,7 @@ namespace DVLD_DataAccess
                         object result = command.ExecuteScalar();
 
                         if (result != null && int.TryParse(result.ToString(), out int newID))
-                            LicenseID = newID;
+                            LocalDrivingLicenseApplicationID = newID;
                     }
                     catch (Exception ex)
                     {
@@ -120,10 +120,10 @@ namespace DVLD_DataAccess
                 }
             }
 
-            return LicenseID??-1;
+            return LocalDrivingLicenseApplicationID??-1;
         }
 
-        public static bool UpdateLocalDrivingLicenseApplication(int LicenseID,
+        public static bool UpdateLocalDrivingLicenseApplication(int LocalDrivingLicenseApplicationID,
              int ApplicationID,  int LicenseClassID)
         {
             int AffectedRows = 0;
@@ -133,11 +133,11 @@ namespace DVLD_DataAccess
                 string query = @"UPDATE LocalDrivingLicenseApplications
                                     SET ApplicationID = @ApplicationID,
                                         LicenseClassID = @LicenseClassID
-                                    WHERE LocalDrivingLicenseApplicationID = @LicenseID";
+                                    WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
                 using(SqlCommand command = new SqlCommand (query , connection))
                 {
-                    command.Parameters.Add("@LicenseID", SqlDbType.Int).Value = LicenseID;
+                    command.Parameters.Add("@LocalDrivingLicenseApplicationID", SqlDbType.Int).Value = LocalDrivingLicenseApplicationID;
                     command.Parameters.Add("@ApplicationID", SqlDbType.Int).Value = ApplicationID;
                     command.Parameters.Add("@LicenseClassID", SqlDbType.Int).Value = LicenseClassID;
 
@@ -156,18 +156,18 @@ namespace DVLD_DataAccess
             return AffectedRows > 0;
         }
 
-        public static bool DeleteLocalDrivingLicenseApplication(int LicenseID)
+        public static bool DeleteLocalDrivingLicenseApplication(int LocalDrivingLicenseApplicationID)
         {
             int AffectedRows = 0;
 
             using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = @"DELETE FROM LocalDrivingLicenseApplications
-                                 WHERE LocalDrivingLicenseApplicationID = @LicenseID";
+                                 WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
 
                 using(SqlCommand command = new SqlCommand(query , connection))
                 {
-                    command.Parameters.Add("@LicenseID",SqlDbType.Int).Value = LicenseID;
+                    command.Parameters.Add("@LocalDrivingLicenseApplicationID",SqlDbType.Int).Value = LocalDrivingLicenseApplicationID;
 
                     try
                     {

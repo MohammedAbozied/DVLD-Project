@@ -82,8 +82,7 @@ namespace DVLD.Applications.Local_Driving_License
 
         private void _LoadPersonalInfo()
         {
-            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.
-                FindByLicenseID(_LocalDrivingLicenseApplicationID);
+            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLDLAppID(_LocalDrivingLicenseApplicationID);
 
             if(_LocalDrivingLicenseApplication == null)
             {
