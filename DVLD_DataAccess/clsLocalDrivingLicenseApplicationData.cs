@@ -188,7 +188,7 @@ namespace DVLD_DataAccess
         {
             DataTable dt = new DataTable();
 
-            using(SqlConnection connection = new SqlConnection())
+            using(SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
             {
                 string query = "SELECT * FROM LocalDrivingLicenseApplications_View";
 
