@@ -88,10 +88,10 @@ namespace DVLD_Business
             } 
         }
 
-        public bool Delete(int LicenseID)
+        public bool Delete()
         {
-            if (clsLocalDrivingLicenseApplicationData.DeleteLocalDrivingLicenseApplication(LicenseID))
-                return clsApplicationData.DeleteApplication(base.ApplicationID);
+            if (clsLocalDrivingLicenseApplicationData.DeleteLocalDrivingLicenseApplication(this.LocalDrivingLicenseApplicationID))
+                return clsApplicationData.DeleteApplication(this.ApplicationID);
 
             return false;
         }

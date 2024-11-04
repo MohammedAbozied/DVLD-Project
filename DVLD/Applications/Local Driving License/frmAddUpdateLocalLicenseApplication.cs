@@ -94,7 +94,7 @@ namespace DVLD.Applications.Local_Driving_License
 
             ctrlPersonCardWithFilter1.LoadPersonInfo(_LocalDrivingLicenseApplication.ApplicantPersonID);
 
-            lblLocalDrivingClassApplicationID.Text = _LocalDrivingLicenseApplication.ApplicationID.ToString();
+            lblLocalDrivingClassApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblApplicationDate.Text = _LocalDrivingLicenseApplication.ApplicationDate.ToShortDateString();
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClass.FindLicenseClassByID(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
             lblApplicationFees.Text= _LocalDrivingLicenseApplication.PaidFees.ToString();
@@ -138,7 +138,7 @@ namespace DVLD.Applications.Local_Driving_License
                 // if person has an active new driving license application in system.
                 if(activeApplication.HasValue)
                 {
-                    MessageBox.Show($"the selected Person Already have an active application for the selected class with id {activeApplication}",
+                    MessageBox.Show($"the selected Person Already has an active application for the selected class with id {activeApplication}",
                         "Choose another License Class, ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cbLicenseClass.Focus();
                     return;
@@ -169,7 +169,7 @@ namespace DVLD.Applications.Local_Driving_License
                         LocalDrivingLicenseApplicationID.ToString();
 
                     this._Mode = enMode.Update;
-
+                    ctrlPersonCardWithFilter1.FilterEnabled = false;
                     lblTitle.Text = this.Text = "Update Local Driving License Application";
 
                     MessageBox.Show($"the local driving class application is saved successfully with ID: {_LocalDrivingLicenseApplicationID}",

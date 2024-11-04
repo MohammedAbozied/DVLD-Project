@@ -3,35 +3,40 @@
   "WorkspaceRootPath": "D:\\DVLD Project\\DVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\local driving license\\frmaddupdatelocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmaddupdatelocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\local driving license\\frmaddupdatelocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmaddupdatelocallicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{435F0CD7-5F60-459D-BA42-58F8B145573D}|..\\DVLD_DataAccess\\DVLD_DataAccess.csproj|d:\\dvld project\\dvld_dataaccess\\clsapplicationdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|D:\\DVLD Project\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C#\\full project by abo-hadhoud\\DVLD_DataAccess\\clsLocalDrivingLicenseApplicationData.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\ctrldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\ctrldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\ctrldrivinglicenseapplicationinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\ctrldrivinglicenseapplicationinfo.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\ctrldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\ctrldrivinglicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|D:\\DVLD Project\\DVLD\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|D:\\DVLD Project\\DVLD\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|d:\\dvld project\\dvld\\frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{D9ED1E4F-59BB-4BC8-929A-A708CBA56AD3}|DVLD.csproj|solutionrelative:frmmain.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -41,8 +46,21 @@
       "DocumentGroups": [
         {
           "DockedHeight": 317,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "clsApplicationData.cs",
+              "DocumentMoniker": "D:\\DVLD Project\\DVLD_DataAccess\\clsApplicationData.cs",
+              "RelativeDocumentMoniker": "..\\DVLD_DataAccess\\clsApplicationData.cs",
+              "ToolTip": "D:\\DVLD Project\\DVLD_DataAccess\\clsApplicationData.cs",
+              "RelativeToolTip": "..\\DVLD_DataAccess\\clsApplicationData.cs",
+              "ViewState": "AgIAAPcAAAAAAAAAAAAjwAEBAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T20:23:30.986Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -65,71 +83,97 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ctrlDrivingLicenseApplicationInfo.Designer.cs",
-              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.Designer.cs",
-              "RelativeDocumentMoniker": "Applications\\ctrlDrivingLicenseApplicationInfo.Designer.cs",
-              "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.Designer.cs",
-              "RelativeToolTip": "Applications\\ctrlDrivingLicenseApplicationInfo.Designer.cs",
-              "ViewState": "AgIAAL0AAAAAAAAAAADwv8EAAAAvAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmAddUpdateLocalDrivingLicesnseApplication.cs",
+              "DocumentMoniker": "D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
+              "RelativeDocumentMoniker": "..\\..\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
+              "ToolTip": "D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
+              "RelativeToolTip": "..\\..\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalDrivingLicesnseApplication.cs",
+              "ViewState": "AgIAAKYAAAAAAAAAAAAAALMAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T23:00:10.371Z",
+              "WhenOpened": "2024-11-04T20:13:14.502Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ctrlDrivingLicenseApplicationInfo.cs",
-              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "RelativeDocumentMoniker": "Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "RelativeToolTip": "Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "frmAddUpdateLocalLicenseApplication.cs",
+              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAswFwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T22:59:50.906Z",
+              "WhenOpened": "2024-11-04T19:34:52.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ctrlDrivingLicenseApplicationInfo.cs [Design]",
-              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "RelativeDocumentMoniker": "Applications\\ctrlDrivingLicenseApplicationInfo.cs",
-              "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\ctrlDrivingLicenseApplicationInfo.cs [Design]",
-              "RelativeToolTip": "Applications\\ctrlDrivingLicenseApplicationInfo.cs [Design]",
+              "Title": "frmAddUpdateLocalLicenseApplication.cs [Design]",
+              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs",
+              "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs [Design]",
+              "RelativeToolTip": "Applications\\Local Driving License\\frmAddUpdateLocalLicenseApplication.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T22:59:49.296Z",
+              "WhenOpened": "2024-11-04T19:34:45.501Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "frmMain.cs",
+              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\frmMain.cs",
+              "RelativeDocumentMoniker": "frmMain.cs",
+              "ToolTip": "D:\\DVLD Project\\DVLD\\frmMain.cs",
+              "RelativeToolTip": "frmMain.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAD4v18AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T19:34:35.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "clsLocalDrivingLicenseApplicationData.cs",
+              "DocumentMoniker": "D:\\C#\\full project by abo-hadhoud\\DVLD_DataAccess\\clsLocalDrivingLicenseApplicationData.cs",
+              "RelativeDocumentMoniker": "..\\..\\C#\\full project by abo-hadhoud\\DVLD_DataAccess\\clsLocalDrivingLicenseApplicationData.cs",
+              "ToolTip": "D:\\C#\\full project by abo-hadhoud\\DVLD_DataAccess\\clsLocalDrivingLicenseApplicationData.cs",
+              "RelativeToolTip": "..\\..\\C#\\full project by abo-hadhoud\\DVLD_DataAccess\\clsLocalDrivingLicenseApplicationData.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-04T19:23:41.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "frmListLocalDrivingLicesnseApplications.cs",
               "DocumentMoniker": "D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
               "RelativeDocumentMoniker": "..\\..\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
               "ToolTip": "D:\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
               "RelativeToolTip": "..\\..\\C#\\full project by abo-hadhoud\\DVLD\\Applications\\Local Driving License\\frmListLocalDrivingLicesnseApplications.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAF4BAAAAAAAAAAD4v2oBAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T22:20:21.058Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "frmManageLocalDrivingLicenseApplications.cs",
               "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
               "ToolTip": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
               "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
-              "ViewState": "AgIAADEAAAAAAAAAAAAswDsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAAAtwLUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T22:16:43.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "frmManageLocalDrivingLicenseApplications.cs [Design]",
               "DocumentMoniker": "D:\\DVLD Project\\DVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplications.cs",
@@ -141,20 +185,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "frmMain.cs",
-              "DocumentMoniker": "D:\\DVLD Project\\DVLD\\frmMain.cs",
-              "RelativeDocumentMoniker": "frmMain.cs",
-              "ToolTip": "D:\\DVLD Project\\DVLD\\frmMain.cs",
-              "RelativeToolTip": "frmMain.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAADwv2EAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-26T12:44:08.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "frmMain.cs [Design]",
               "DocumentMoniker": "D:\\DVLD Project\\DVLD\\frmMain.cs",
               "RelativeDocumentMoniker": "frmMain.cs",

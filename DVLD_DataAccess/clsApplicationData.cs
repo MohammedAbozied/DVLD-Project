@@ -257,7 +257,13 @@ namespace DVLD_DataAccess
                     try
                     {
                         connection.Open();
-                        applicationID = (int)command.ExecuteScalar();
+                        using(SqlDataReader reader = command.ExecuteReader())
+                        {
+                            if(reader.Read())
+                            {
+                                applicationID = (int)reader["ApplicationID"];
+                            }
+                        }
                     }
                     catch(Exception ex)
                     {
