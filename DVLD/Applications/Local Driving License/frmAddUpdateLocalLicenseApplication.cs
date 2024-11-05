@@ -99,7 +99,7 @@ namespace DVLD.Applications.Local_Driving_License
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClass.FindLicenseClassByID(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
             lblApplicationFees.Text= _LocalDrivingLicenseApplication.PaidFees.ToString();
             lblCreatedBy.Text = _LocalDrivingLicenseApplication.CreatedByUserInfo.UserName;
-
+            _SelectedPersonID = ctrlPersonCardWithFilter1.PersonID;
         }
 
         private void ctrlPersonCardWithFilter1_PersonSelected(object sender, People.controls.ctrlPersonCardWithFilter.DataBackEventArgs e)
@@ -123,22 +123,25 @@ namespace DVLD.Applications.Local_Driving_License
                 tcLocalLicenseApplication.TabPages["tpApplicationInfo"];
 
             btnSave.Enabled = true;
+            MessageBox.Show($"selected personID = {_SelectedPersonID}");
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("are you sure you want to save this application","saving",
+
+            if (MessageBox.Show("are you sure you want to save this application","saving",
                 MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
             {
                 int LicenseClassID = clsLicenseClass.FindLicenseClassByClassName(cbLicenseClass.Text).LicenseClassID;
 
-                int? activeApplication = clsApplication.GetActiveApplicationIDForLicenseClass(
+                int? activeApplicationID = clsApplication.GetActiveApplicationIDForLicenseClass(
                     _SelectedPersonID.Value, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID);
 
                 // if person has an active new driving license application in system.
-                if(activeApplication.HasValue)
+                if(activeApplicationID.HasValue)
                 {
-                    MessageBox.Show($"the selected Person Already has an active application for the selected class with id {activeApplication}",
+                    MessageBox.Show($"the selected Person Already has an active application for the selected class.",
                         "Choose another License Class, ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cbLicenseClass.Focus();
                     return;
