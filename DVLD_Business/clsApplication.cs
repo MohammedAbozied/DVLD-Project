@@ -152,7 +152,11 @@ namespace DVLD_Business
             return clsApplicationData.GetActiveApplicationIDForLicenseClass(personID, (int)applicationTypeID, licenseClassID);
         }
 
-
+        public bool Cancel()
+        {
+            this.ApplicationStatus = enApplicationStatus.Cancelled;
+            return _UpdateApplication();
+        }
 
     }
 }
