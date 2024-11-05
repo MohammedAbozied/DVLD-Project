@@ -28,10 +28,10 @@ namespace DVLD.Applications.Local_Driving_License
            
         }
 
-        public frmAddUpdateLocalLicenseApplication(int DrivingLicenseApplicationID)
+        public frmAddUpdateLocalLicenseApplication(int LDLAppID)
         {
             InitializeComponent();
-            this._LocalDrivingLicenseApplicationID = DrivingLicenseApplicationID;
+            this._LocalDrivingLicenseApplicationID = LDLAppID;
             this._Mode = enMode.Update;
         }
 
@@ -133,7 +133,7 @@ namespace DVLD.Applications.Local_Driving_License
                 int LicenseClassID = clsLicenseClass.FindLicenseClassByClassName(cbLicenseClass.Text).LicenseClassID;
 
                 int? activeApplication = clsApplication.GetActiveApplicationIDForLicenseClass(
-                    _LocalDrivingLicenseApplication.ApplicantPersonID, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID);
+                    _SelectedPersonID.Value, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID);
 
                 // if person has an active new driving license application in system.
                 if(activeApplication.HasValue)
@@ -145,7 +145,7 @@ namespace DVLD.Applications.Local_Driving_License
                 }
 
                 // if person has the same type of license 
-                if(clsLicense.IsLicenseExistByPersonID(ctrlPersonCardWithFilter1.PersonID,LicenseClassID))
+                if(clsLicense.IsLicenseExistByPersonID(_SelectedPersonID.Value, LicenseClassID))
                 {
                     MessageBox.Show($"Person already have a license with the same applied driving class, Choose different driving class",
                         "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -154,7 +154,7 @@ namespace DVLD.Applications.Local_Driving_License
                 }
 
                 // Fill object
-                _LocalDrivingLicenseApplication.ApplicantPersonID = ctrlPersonCardWithFilter1.PersonID;
+                _LocalDrivingLicenseApplication.ApplicantPersonID = _SelectedPersonID.Value;
                 _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
                 _LocalDrivingLicenseApplication.ApplicationTypeID = (byte)clsApplication.enApplicationType.NewDrivingLicense;
                 _LocalDrivingLicenseApplication.ApplicationStatus = clsApplication.enApplicationStatus.New;
@@ -172,7 +172,7 @@ namespace DVLD.Applications.Local_Driving_License
                     ctrlPersonCardWithFilter1.FilterEnabled = false;
                     lblTitle.Text = this.Text = "Update Local Driving License Application";
 
-                    MessageBox.Show($"the local driving class application is saved successfully with ID: {_LocalDrivingLicenseApplicationID}",
+                    MessageBox.Show($"the local driving class application is saved successfully with ID: {_LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID}",
                         "saved Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }

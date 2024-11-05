@@ -234,45 +234,46 @@ namespace DVLD_DataAccess
             return isFound;
         }
 
-        public static int? GetActiveApplicationIDForLicenseClass(int personID,int applicationTypeID,int licenseClassID)
+        public static int? GetActiveApplicationIDForLicenseClass(int PersonID, int ApplicationTypeID, int LicenseClassID)
         {
-            int? applicationID = null;
+            int? ActiveApplicationID = null;
 
             using (SqlConnection connection = new SqlConnection(clsDataAccessSettings.ConnectionString))
+
             {
                 string query = @"SELECT ActiveApplicationID=Applications.ApplicationID  
-                                    From Applications INNER JOIN
-                                        LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
-                                    WHERE ApplicantPersonID = @ApplicantPersonID 
-                                        and ApplicationTypeID=@ApplicationTypeID 
-				                        and LocalDrivingLicenseApplications.LicenseClassID = @LicenseClassID
-                                        and ApplicationStatus=1";// active
+                                From
+                                Applications INNER JOIN
+                                LocalDrivingLicenseApplications ON Applications.ApplicationID = LocalDrivingLicenseApplications.ApplicationID
+                                WHERE ApplicantPersonID = @ApplicantPersonID 
+                                and ApplicationTypeID=@ApplicationTypeID 
+			    				and LocalDrivingLicenseApplications.LicenseClassID = @LicenseClassID
+                                and ApplicationStatus=1";
 
-                using(SqlCommand command = new SqlCommand(query,connection))
+                using (SqlCommand command = new SqlCommand(query, connection))
+
                 {
-                    command.Parameters.Add("@ApplicantPersonID", SqlDbType.Int).Value = personID;
-                    command.Parameters.Add("@ApplicationTypeID", SqlDbType.Int).Value = applicationTypeID;
-                    command.Parameters.Add("@LicenseClassID", SqlDbType.Int).Value = licenseClassID;
-
+                    command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
+                    command.Parameters.AddWithValue("@ApplicationTypeID", ApplicationTypeID);
+                    command.Parameters.AddWithValue("@LicenseClassID", LicenseClassID);
                     try
                     {
                         connection.Open();
-                        using(SqlDataReader reader = command.ExecuteReader())
+                        object result = command.ExecuteScalar();
+
+                        if (result != null && int.TryParse(result.ToString(), out int AppID))
                         {
-                            if(reader.Read())
-                            {
-                                applicationID = (int)reader["ApplicationID"];
-                            }
+                            ActiveApplicationID = AppID;
                         }
                     }
-                    catch(Exception ex)
+                    catch (Exception ex)
                     {
-                        Console.WriteLine(ex.Message);
+                        Console.WriteLine("Error: " + ex.Message);
                     }
                 }
             }
 
-            return applicationID;
+            return ActiveApplicationID;
         }
 
 

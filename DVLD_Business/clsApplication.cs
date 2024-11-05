@@ -149,7 +149,7 @@ namespace DVLD_Business
 
         public static int? GetActiveApplicationIDForLicenseClass(int personID, clsApplication.enApplicationType applicationTypeID, int licenseClassID)
         {
-            return clsApplicationData.GetActiveApplicationIDForLicenseClass(personID,(int)applicationTypeID,licenseClassID);
+            return clsApplicationData.GetActiveApplicationIDForLicenseClass(personID, (int)applicationTypeID, licenseClassID);
         }
 
 
