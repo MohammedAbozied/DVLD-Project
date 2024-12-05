@@ -57,3 +57,5 @@ D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.ctrlDrivingLicenseApplicationIn
 D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.Local_Driving_License.frmLocalDrivingLicenseApplicationInfo.resources
 D:\DVLD Project\DVLD\obj\Debug\DVLD.Applications.Local_Driving_License.frmManageLocalDrivingLicenseApplications.resources
 D:\DVLD Project\DVLD\bin\Debug\MetroFramework.dll
+D:\DVLD Project\DVLD\obj\Debug\DVLD.Tests.frmScheduleTest.resources
+D:\DVLD Project\DVLD\obj\Debug\DVLD.Tests.Controls.ctrlScheduleTest.resources

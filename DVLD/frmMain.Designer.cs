@@ -91,7 +91,8 @@
             this.applicationsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.applicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.applicationsToolStripMenuItem.Name = "applicationsToolStripMenuItem";
-            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(181, 68);
+            this.applicationsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.applicationsToolStripMenuItem.Size = new System.Drawing.Size(226, 68);
             this.applicationsToolStripMenuItem.Text = "Applications";
             // 
             // drivingLicensesServicesToolStripMenuItem
@@ -279,7 +280,9 @@
             this.peopleToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.peopleToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.peopleToolStripMenuItem.Name = "peopleToolStripMenuItem";
-            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(139, 68);
+            this.peopleToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded;
+            this.peopleToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.peopleToolStripMenuItem.Size = new System.Drawing.Size(184, 68);
             this.peopleToolStripMenuItem.Text = "People";
             this.peopleToolStripMenuItem.Click += new System.EventHandler(this.peopleToolStripMenuItem_Click);
             // 
@@ -290,7 +293,8 @@
             this.driversToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.driversToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.driversToolStripMenuItem.Name = "driversToolStripMenuItem";
-            this.driversToolStripMenuItem.Size = new System.Drawing.Size(140, 68);
+            this.driversToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.driversToolStripMenuItem.Size = new System.Drawing.Size(185, 68);
             this.driversToolStripMenuItem.Text = "Drivers";
             // 
             // usersToolStripMenuItem
@@ -300,7 +304,8 @@
             this.usersToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.usersToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.usersToolStripMenuItem.Name = "usersToolStripMenuItem";
-            this.usersToolStripMenuItem.Size = new System.Drawing.Size(129, 68);
+            this.usersToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.usersToolStripMenuItem.Size = new System.Drawing.Size(174, 68);
             this.usersToolStripMenuItem.Text = "Users";
             this.usersToolStripMenuItem.Click += new System.EventHandler(this.usersToolStripMenuItem_Click);
             // 
@@ -315,7 +320,8 @@
             this.accountSettingsToolStripMenuItem.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.accountSettingsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.accountSettingsToolStripMenuItem.Name = "accountSettingsToolStripMenuItem";
-            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(217, 68);
+            this.accountSettingsToolStripMenuItem.Padding = new System.Windows.Forms.Padding(50, 0, 5, 0);
+            this.accountSettingsToolStripMenuItem.Size = new System.Drawing.Size(262, 68);
             this.accountSettingsToolStripMenuItem.Text = "Account Settings";
             // 
             // currenetUserInfoToolStripMenuItem
