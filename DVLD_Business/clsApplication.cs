@@ -72,7 +72,7 @@ namespace DVLD_Business
             this.PersonInfo = clsPerson.Find(this.ApplicantPersonID);
             this.ApplicationDate = ApplicationDate;
             this.ApplicationTypeID = ApplicationTypeID;
-            this.ApplicationTypeInfo = clsApplicationType.Find(this.ApplicantPersonID);
+            this.ApplicationTypeInfo = clsApplicationType.Find(this.ApplicationTypeID);
             this.ApplicationStatus = ApplicationStatus;
             this.LastStatusDate = LastStatusDate;
             this.PaidFees= PaidFees;
@@ -149,10 +149,14 @@ namespace DVLD_Business
 
         public static int? GetActiveApplicationIDForLicenseClass(int personID, clsApplication.enApplicationType applicationTypeID, int licenseClassID)
         {
-            return clsApplicationData.GetActiveApplicationIDForLicenseClass(personID,(int)applicationTypeID,licenseClassID);
+            return clsApplicationData.GetActiveApplicationIDForLicenseClass(personID, (int)applicationTypeID, licenseClassID);
         }
 
-
+        public bool Cancel()
+        {
+            this.ApplicationStatus = enApplicationStatus.Cancelled;
+            return _UpdateApplication();
+        }
 
     }
 }

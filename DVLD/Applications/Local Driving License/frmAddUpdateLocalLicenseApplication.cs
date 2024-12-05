@@ -28,10 +28,10 @@ namespace DVLD.Applications.Local_Driving_License
            
         }
 
-        public frmAddUpdateLocalLicenseApplication(int DrivingLicenseApplicationID)
+        public frmAddUpdateLocalLicenseApplication(int LDLAppID)
         {
             InitializeComponent();
-            this._LocalDrivingLicenseApplicationID = DrivingLicenseApplicationID;
+            this._LocalDrivingLicenseApplicationID = LDLAppID;
             this._Mode = enMode.Update;
         }
 
@@ -56,7 +56,7 @@ namespace DVLD.Applications.Local_Driving_License
         private void _ResetDefaultValues()
         {
             _FillLicenseClassComboBox();
-
+            
             if(_Mode == enMode.AddNew) // add new mode 
             {
                 lblTitle.Text = this.Text = "New Local Driving License Application";
@@ -82,8 +82,7 @@ namespace DVLD.Applications.Local_Driving_License
 
         private void _LoadPersonalInfo()
         {
-            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.
-                FindByLicenseID(_LocalDrivingLicenseApplicationID);
+            _LocalDrivingLicenseApplication = clsLocalDrivingLicenseApplication.FindByLDLAppID(_LocalDrivingLicenseApplicationID);
 
             if(_LocalDrivingLicenseApplication == null)
             {
@@ -95,12 +94,12 @@ namespace DVLD.Applications.Local_Driving_License
 
             ctrlPersonCardWithFilter1.LoadPersonInfo(_LocalDrivingLicenseApplication.ApplicantPersonID);
 
-            lblLocalDrivingClassApplicationID.Text = _LocalDrivingLicenseApplication.ApplicationID.ToString();
+            lblLocalDrivingClassApplicationID.Text = _LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID.ToString();
             lblApplicationDate.Text = _LocalDrivingLicenseApplication.ApplicationDate.ToShortDateString();
             cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClass.FindLicenseClassByID(_LocalDrivingLicenseApplication.LicenseClassID).ClassName);
             lblApplicationFees.Text= _LocalDrivingLicenseApplication.PaidFees.ToString();
             lblCreatedBy.Text = _LocalDrivingLicenseApplication.CreatedByUserInfo.UserName;
-
+            _SelectedPersonID = ctrlPersonCardWithFilter1.PersonID;
         }
 
         private void ctrlPersonCardWithFilter1_PersonSelected(object sender, People.controls.ctrlPersonCardWithFilter.DataBackEventArgs e)
@@ -124,32 +123,41 @@ namespace DVLD.Applications.Local_Driving_License
                 tcLocalLicenseApplication.TabPages["tpApplicationInfo"];
 
             btnSave.Enabled = true;
+            MessageBox.Show($"selected personID = {_SelectedPersonID}");
+
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if(MessageBox.Show("are you sure you want to save this application","saving",
+
+            if (MessageBox.Show("are you sure you want to save this application","saving",
                 MessageBoxButtons.OKCancel,MessageBoxIcon.Question) == DialogResult.OK)
             {
                 int LicenseClassID = clsLicenseClass.FindLicenseClassByClassName(cbLicenseClass.Text).LicenseClassID;
 
-                int? activeApplication = clsApplication.GetActiveApplicationIDForLicenseClass(
-                    _LocalDrivingLicenseApplication.ApplicantPersonID, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID);
+                int? activeApplicationID = clsApplication.GetActiveApplicationIDForLicenseClass(
+                    _SelectedPersonID.Value, clsApplication.enApplicationType.NewDrivingLicense, LicenseClassID);
 
                 // if person has an active new driving license application in system.
-                if(activeApplication.HasValue)
+                if(activeApplicationID.HasValue)
                 {
-                    MessageBox.Show($"the selected Person Already have an active application for the selected class with id {activeApplication}",
+                    MessageBox.Show($"the selected Person Already has an active application for the selected class.",
                         "Choose another License Class, ", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     cbLicenseClass.Focus();
                     return;
                 }
 
                 // if person has the same type of license 
-                // after complete clsLicense dataAccess and business
+                if(clsLicense.IsLicenseExistByPersonID(_SelectedPersonID.Value, LicenseClassID))
+                {
+                    MessageBox.Show($"Person already have a license with the same applied driving class, Choose different driving class",
+                        "Not allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    cbLicenseClass.Focus();
+                    return;
+                }
 
                 // Fill object
-                _LocalDrivingLicenseApplication.ApplicantPersonID = ctrlPersonCardWithFilter1.PersonID;
+                _LocalDrivingLicenseApplication.ApplicantPersonID = _SelectedPersonID.Value;
                 _LocalDrivingLicenseApplication.ApplicationDate = DateTime.Now;
                 _LocalDrivingLicenseApplication.ApplicationTypeID = (byte)clsApplication.enApplicationType.NewDrivingLicense;
                 _LocalDrivingLicenseApplication.ApplicationStatus = clsApplication.enApplicationStatus.New;
@@ -164,10 +172,10 @@ namespace DVLD.Applications.Local_Driving_License
                         LocalDrivingLicenseApplicationID.ToString();
 
                     this._Mode = enMode.Update;
-
+                    ctrlPersonCardWithFilter1.FilterEnabled = false;
                     lblTitle.Text = this.Text = "Update Local Driving License Application";
 
-                    MessageBox.Show($"the local driving class application is saved successfully with ID: {_LocalDrivingLicenseApplicationID}",
+                    MessageBox.Show($"the local driving class application is saved successfully with ID: {_LocalDrivingLicenseApplication.LocalDrivingLicenseApplicationID}",
                         "saved Successfully", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 }

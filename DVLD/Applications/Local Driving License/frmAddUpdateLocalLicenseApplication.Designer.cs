@@ -126,7 +126,7 @@
             this.cbLicenseClass.FormattingEnabled = true;
             this.cbLicenseClass.Location = new System.Drawing.Point(338, 210);
             this.cbLicenseClass.Name = "cbLicenseClass";
-            this.cbLicenseClass.Size = new System.Drawing.Size(291, 35);
+            this.cbLicenseClass.Size = new System.Drawing.Size(408, 35);
             this.cbLicenseClass.TabIndex = 9;
             // 
             // lblCreatedBy
