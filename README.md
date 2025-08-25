@@ -2,23 +2,24 @@
 
 ![Screenshot 1](https://github.com/user-attachments/assets/fb3786da-49e0-47a1-83b8-ce21a954a3cb)
 
-## 🛠️ التقنيات والمهارات Used Technologies & Skills
+## 🛠️ Technologies & Skills
 
-| القسم | التفاصيل |
-|-------|----------|
-| اللغات | C# |
-| التقنيات | ADO.NET, Windows Forms |
-| تصميم الكود | 3 Architectures, Clean Coding Principles |
-| وظائف البرنامج | CRUD, Workflow Management, Reporting |
+| Category | Details |
+|----------|---------|
+| Languages | C# |
+| Technologies | ADO.NET, Windows Forms |
+| Code Design | 3-layer Architecture, Clean Coding Principles |
+| Features | CRUD, Workflow Management, Reporting |
 
-## 📋 الميزات Features
+## 📋 Features
 
-- إدارة بيانات السائقين والمركبات (CRUD)  
-- متابعة مراحل استخراج الرخصة  
-- تقارير مفصلة وسريعة  
-- واجهة مستخدم سهلة مع البحث السريع  
+- Manage driver and vehicle data (CRUD)  
+- Track the license issuance process step by step  
+- Generate detailed and fast reports  
+- User-friendly interface with quick search functionality  
+- Clear separation between UI, business logic, and data access layers for easier development and maintenance
 
-## 📸 لقطات الشاشة Screenshots
+## 📸 Screenshots
 
 ![Screenshot 2](https://github.com/user-attachments/assets/2f302781-989d-4889-9c2c-f2a4cc0ea7f6)
 ![Screenshot 3](https://github.com/user-attachments/assets/baf558cc-da62-4927-9f8d-1257055698be)
@@ -33,7 +34,7 @@
 ![Screenshot 12](https://github.com/user-attachments/assets/fb3786da-49e0-47a1-83b8-ce21a954a3cb)
 ![Screenshot 13](https://github.com/user-attachments/assets/052a97e0-3a3d-4af2-a7a9-0ddf38fa67d1)
 
-## 🚀 التشغيل How to Run
+## 🚀 How to Run
 
 ```bash
 git clone https://github.com/MohammedAbozied/DVLD-Project.git
