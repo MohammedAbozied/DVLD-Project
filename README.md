@@ -1,6 +1,6 @@
 # 🚗 Driving & Vehicle License Department (DVLD) – Desktop Project
 
-![Screenshot 1](https://github.com/user-attachments/assets/2f302781-989d-4889-9c2c-f2a4cc0ea7f6)
+![Screenshot 1](https://github.com/user-attachments/assets/fb3786da-49e0-47a1-83b8-ce21a954a3cb)
 
 ## 🛠️ التقنيات والمهارات Used Technologies & Skills
 
@@ -20,7 +20,7 @@
 
 ## 📸 لقطات الشاشة Screenshots
 
-![Screenshot 2](https://github.com/user-attachments/assets/052a97e0-3a3d-4af2-a7a9-0ddf38fa67d1)
+![Screenshot 2](https://github.com/user-attachments/assets/2f302781-989d-4889-9c2c-f2a4cc0ea7f6)
 ![Screenshot 3](https://github.com/user-attachments/assets/baf558cc-da62-4927-9f8d-1257055698be)
 ![Screenshot 4](https://github.com/user-attachments/assets/5805fe98-21d3-469b-ac3e-dfc9370fc0ed)
 ![Screenshot 5](https://github.com/user-attachments/assets/8eb17a5e-bc92-45b8-ac65-cfd45855e6ed)
@@ -31,7 +31,7 @@
 ![Screenshot 10](https://github.com/user-attachments/assets/0ac1c408-4519-4a6e-a967-b12128773316)
 ![Screenshot 11](https://github.com/user-attachments/assets/7c969752-3b61-4fac-a004-bdd53d117928)
 ![Screenshot 12](https://github.com/user-attachments/assets/fb3786da-49e0-47a1-83b8-ce21a954a3cb)
-![Screenshot 13](https://github.com/user-attachments/assets/e66d86a4-689f-4a2b-b142-11262df0cc7c)
+![Screenshot 13](https://github.com/user-attachments/assets/052a97e0-3a3d-4af2-a7a9-0ddf38fa67d1)
 
 ## 🚀 التشغيل How to Run
 
