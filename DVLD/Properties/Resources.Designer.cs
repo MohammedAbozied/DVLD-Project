@@ -853,6 +853,16 @@ namespace DVLD.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pin_number32 {
+            get {
+                object obj = ResourceManager.GetObject("pin-number32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Question_32 {
             get {
                 object obj = ResourceManager.GetObject("Question_32", resourceCulture);
@@ -996,6 +1006,16 @@ namespace DVLD.Properties {
         internal static System.Drawing.Bitmap SignOut_64 {
             get {
                 object obj = ResourceManager.GetObject("SignOut_64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap social_number32 {
+            get {
+                object obj = ResourceManager.GetObject("social-number32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

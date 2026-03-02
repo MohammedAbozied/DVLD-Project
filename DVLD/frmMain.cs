@@ -80,16 +80,20 @@ namespace DVLD
             frmTestTypes.ShowDialog();
         }
 
-        private void toolStripSeparator2_Click(object sender, EventArgs e)
+        
+
+        
+
+        private void localDrivingLicenseApplicationToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmManageApplications frm = new frmManageApplications();
+            frmManageLocalDrivingLicenseApplications frm = new frmManageLocalDrivingLicenseApplications();
             frm.ShowDialog();
         }
 
-        private void addNewLocalLicenseAppToolStripMenuItem_Click(object sender, EventArgs e)
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmAddUpdateLocalLicenseApplication frmAddNew = new frmAddUpdateLocalLicenseApplication();
-            frmAddNew.ShowDialog();
+            frmAddUpdateLocalLicenseApplication frmAddLDLApp = new frmAddUpdateLocalLicenseApplication();   
+            frmAddLDLApp.ShowDialog();
         }
     }
 

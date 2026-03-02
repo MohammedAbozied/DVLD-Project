@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MetroFramework">
+      <HintPath>C:\Users\m7md7\.nuget\packages\metroframework.runtime\1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
@@ -59,6 +62,12 @@
     <Compile Include="Applications\ApplicationTypes\frmManageApplicationTypes.Designer.cs">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Applications\ctrlDrivingLicenseApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Applications\ctrlDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Applications\frmManageApplications.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +79,18 @@
     </Compile>
     <Compile Include="Applications\Local Driving License\frmAddUpdateLocalLicenseApplication.Designer.cs">
       <DependentUpon>frmAddUpdateLocalLicenseApplication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmLocalDrivingLicenseApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmLocalDrivingLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>frmLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmManageLocalDrivingLicenseApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Applications\Local Driving License\frmManageLocalDrivingLicenseApplications.Designer.cs">
+      <DependentUpon>frmManageLocalDrivingLicenseApplications.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
@@ -142,6 +163,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Tests\Controls\ctrlSheduleTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Tests\Controls\ctrlSheduleTest.Designer.cs">
+      <DependentUpon>ctrlSheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tests\frmScheduleTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tests\frmScheduleTest.Designer.cs">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\TestTypes\frmManageTestTypes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -190,11 +223,20 @@
     <EmbeddedResource Include="Applications\ApplicationTypes\frmManageApplicationTypes.resx">
       <DependentUpon>frmManageApplicationTypes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Applications\ctrlDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>ctrlDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Applications\frmManageApplications.resx">
       <DependentUpon>frmManageApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Applications\Local Driving License\frmAddUpdateLocalLicenseApplication.resx">
       <DependentUpon>frmAddUpdateLocalLicenseApplication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Local Driving License\frmLocalDrivingLicenseApplicationInfo.resx">
+      <DependentUpon>frmLocalDrivingLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Applications\Local Driving License\frmManageLocalDrivingLicenseApplications.resx">
+      <DependentUpon>frmManageLocalDrivingLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
@@ -240,6 +282,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\Controls\ctrlSheduleTest.resx">
+      <DependentUpon>ctrlSheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tests\frmScheduleTest.resx">
+      <DependentUpon>frmScheduleTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\TestTypes\frmManageTestTypes.resx">
       <DependentUpon>frmManageTestTypes.cs</DependentUpon>
@@ -620,6 +668,17 @@
   <ItemGroup>
     <None Include="Resources\person_.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\pin-number32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-number32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pin-number321.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\social-number321.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
